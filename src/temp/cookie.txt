@@ -1,0 +1,8 @@
+# Netscape HTTP Cookie File
+# http://curl.haxx.se/rfc/cookie_spec.html
+# This is a generated file!  Do not edit.
+
+.ieeexplore.ieee.org	TRUE	/	TRUE		TS01d430e1	012f35062352511c2d7d9f58e5e5ac36c83947baed8844aff3ceb113e48d1b8b3faf339aecf83ebc6d3d05d4cd769cb7b38d5889a4395f24474f3bbbcba6c30cf71fb4ff7e
+ieeexplore.ieee.org	FALSE	/	TRUE		JSESSIONID	L9ydRXq-SdiR-Ne_QT9wEWcpRS_0v2RjrnpMrydtahJStFKU99ua!-574928128
+ieeexplore.ieee.org	FALSE	/	TRUE		TS011813a0	012f3506233df1a66664347a2fd49418496a5a9a668844aff3ceb113e48d1b8b3faf339aecf5b80e8f421a8a8c9bc6c4baeece06462e45d67c85aa8acffc778015f2d06a0068efb4aee04897a09931a04b7302fa32
+ieeexplore.ieee.org	FALSE	/	FALSE	1536028301	WLSESSION	237134476.20480.0000
