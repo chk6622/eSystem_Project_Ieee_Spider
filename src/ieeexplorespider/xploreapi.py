@@ -334,7 +334,7 @@ class XPLORE:
     def callAPI(self, debugModeOff=True):
 
         str = self.buildQuery()
-        print str
+#         print str
 
         if debugModeOff is False:
         

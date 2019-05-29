@@ -66,11 +66,11 @@ class IeeeApiSpider(object):
                 query.resultsFilter('start_year',self.QUERY_BEGIN_YEAR)
             if self.QUERY_END_YEAR:
                 query.resultsFilter('end_year', self.QUERY_END_YEAR) 
-            appLogger.info(self.getQueryInfo(keyWords))
+#             appLogger.info(self.getQueryInfo(keyWords))
             while True:
                 query.startingResult(begin)
                 results = query.callAPI(debugModeOff=True)
-                print results
+#                 print results
                 self.CUR_QUERY_COUNT+=1
                 articles=self.getArticles(results)  #get articles list
                 if articles:

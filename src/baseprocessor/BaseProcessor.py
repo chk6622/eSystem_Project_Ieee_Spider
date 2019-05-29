@@ -42,7 +42,7 @@ class BaseProcessor(Thread):
             if self.inputQueue:
                 processObj=self.inputQueue.get(block=True)
                 if not processObj:
-                    time.sleep(0.01)
+                    time.sleep(0.001)
                     continue
             beginTime=time.time()
             try:

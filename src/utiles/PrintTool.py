@@ -35,7 +35,7 @@ class PrintTool(object):
             if not timeArray:
                 timeArray=[]
                 self.timeMap[message]= timeArray
-            sReturn='Beginning: %-s...' %message
+            sReturn='Beginning: %-s' %message
             timeArray.append(self.getCurTime())
         appLogger.info(sReturn)
         ser1Lock.release()
@@ -49,7 +49,8 @@ class PrintTool(object):
                 timeArray=[]
             timeArray.append(self.getCurTime())
 #             periodArray=self.periodMap.get(message)
-            sReturn='Finishing: %-50s spending: %6d ms, max: %6d ms, min: %6d ms, avg: %6d ms' % (message,self.getPeriod(message),max(self.periodMap.get(message)),min(self.periodMap.get(message)),self.getAvg(self.periodMap.get(message)))
+#             sReturn='Finishing: %-50s spending: %6d ms, max: %6d ms, min: %6d ms, avg: %6d ms' % (message,self.getPeriod(message),max(self.periodMap.get(message)),min(self.periodMap.get(message)),self.getAvg(self.periodMap.get(message)))
+            sReturn='Finishing: %-30s spending: %.1f s' % (message,self.getPeriod(message)/1000)
         appLogger.info(sReturn)
         ser1Lock.release()
         

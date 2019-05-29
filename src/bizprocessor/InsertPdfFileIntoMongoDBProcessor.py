@@ -34,7 +34,7 @@ class InsertPdfFileIntoMongoDBProcessor(BaseProcessor):
     def process(self,processObj=None):
         if processObj:
             fileTempPath=processObj.fileTempPath
-            fileName=processObj.fileName
+            fileName=processObj.db_filename
             if self.mongoDBDAO:
                 if processObj.isGetFile:  #if get pdf file success then save the file into the database
                     fileId=self.mongoDBDAO.insertFile(fileTempPath, fileName, isDelFile=True)  #delete temp file

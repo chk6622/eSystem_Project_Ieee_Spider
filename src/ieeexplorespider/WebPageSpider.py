@@ -109,12 +109,12 @@ class WebPageSpider(object):
 #                     ser1Lock.release()
                     #save cookie               
                     soup = BeautifulSoup(response,features='lxml')
-                    appLogger.info(pdfUrl)
+#                     appLogger.info(pdfUrl)
                     if soup.iframe:
                         sReturn=soup.iframe.attrs.get('src')  #get real pdf url
                         break
                     else:
-                        print requestHeaders
+#                         print requestHeaders
                         time.sleep(10)
         except Exception, err:
             appLogger.error(err)

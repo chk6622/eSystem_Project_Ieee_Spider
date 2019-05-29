@@ -25,8 +25,8 @@ class Statistics(object):
         
     def addProcessorLog(self,streamLogger):
         if streamLogger and isinstance(streamLogger, StreamLogger):
-            if not self.totalCount:
-                self.startTime=time.time()
+#             if not self.totalCount:
+#                 self.startTime=time.time()
             self.totalCount+=1  #sys processes total data adds 1
             self.totalPod=time.time()-self.startTime  #get sys runs total time
             if not self.totalPod:
@@ -75,9 +75,10 @@ class Statistics(object):
                 
                 
     def getStatisticInfo(self):
-        sReturn='start time:%s,total spending time:%.2f s,processing total data:%s,avg processing speed:%.2f /s,the spending time processing single data :%.3f s\n' % (time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(self.startTime)),self.totalPod,self.totalCount,self.totalAvg,self.singlePod)
-        for key in self.processorList:
-            statList=self.processorTimeDic.get(key)
-            sReturn+='%-50s:current spending time%8.3fs；max spending time%8.3fs；min spending time%8.3fs；avg spending time%8.3fs\n' % (key,statList[0],statList[2],statList[3],statList[4])
+#         sReturn='start time:%s,total spending time:%.2f s,processing total data:%s,avg processing speed:%.2f /s,the spending time processing single data :%.3f s\n' % (time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(self.startTime)),self.totalPod,self.totalCount,self.totalAvg,self.singlePod)
+        sReturn='start time:%s,total spending time:%.2f s,processing total data:%s,avg processing speed:%.2f /s\n' % (time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(self.startTime)),self.totalPod,self.totalCount,self.totalAvg)
+#         for key in self.processorList:
+#             statList=self.processorTimeDic.get(key)
+#             sReturn+='%-50s:current spending time%8.3fs；max spending time%8.3fs；min spending time%8.3fs；avg spending time%8.3fs\n' % (key,statList[0],statList[2],statList[3],statList[4])
         return sReturn
                 

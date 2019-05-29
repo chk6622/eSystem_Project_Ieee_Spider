@@ -34,6 +34,7 @@ class GetPdfFileProcessor(BaseProcessor):
             else:
                 fileName='simulated file.pdf'
             processObj.fileName=fileName
+            processObj.db_filename=result.get('article_number')+'.pdf'
             fileTempPath=self.webSpider.generateTempFilePath(fileName)
 
             flag=self.webSpider.getPdfFile(realPdfUrl, fileTempPath)
